@@ -1,7 +1,9 @@
 import { EMAIL_INPUT_TEST_ID } from '../actions/index';
 
 const INITIAL_STATE = {
-  email: '',
+  user: {
+    email: '',
+  },
 };
 
 const user = (state = INITIAL_STATE, action) => {
