@@ -7,17 +7,15 @@ class Header extends Component {
     const { email } = this.props;
     return (
       <div>
-        Header
         <div data-testid="email-field">
           Email:
           { email }
         </div>
         <div data-testid="total-field">
-          Despesa total gerada pela lista de gastos:
-          0
+          Despesa total:
+          R$ 0,00
         </div>
         <div data-testid="header-currency-field">
-          Câmbio está sendo utilizado:
           BRL
         </div>
       </div>

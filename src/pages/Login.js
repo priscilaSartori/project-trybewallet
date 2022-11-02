@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { submitPersonalForm } from '../redux/actions/index';
+import { emailImput } from '../redux/actions/index';
 
 class Login extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class Login extends React.Component {
     event.preventDefault();
     const { email } = this.state;
     const { dispatch, history } = this.props;
-    dispatch(submitPersonalForm(email));
+    dispatch(emailImput(email));
     history.push('/carteira');
   };
 

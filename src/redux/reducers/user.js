@@ -1,16 +1,13 @@
-import { EMAIL_INPUT_TEST_ID } from '../actions/index';
+import { EMAIL_INPUT } from '../actions/index';
 
 const INITIAL_STATE = {
-  user: {
-    email: '',
-  },
+  email: '',
 };
 
 const user = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case EMAIL_INPUT_TEST_ID:
+  case EMAIL_INPUT:
     return { email: action.payload };
-
   default:
     return state;
   }
