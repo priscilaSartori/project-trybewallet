@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchcurrency } from '../redux/actions/index';
+import { fetchcurrency, submitWalletForm } from '../redux/actions/index';
 
 class WalletForm extends Component {
   state = {
-    value: '',
+    id: 0,
+    value: 0,
     description: '',
     currency: 'USD',
     method: 'Dinheiro',
     tag: 'Alimentação',
+    price: {},
   };
 
   componentDidMount() {
@@ -22,11 +24,21 @@ class WalletForm extends Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = () => {
+    const { dispatch } = this.props;
+    const priceAPI = dispatch(fetchprice());
+    this.setState({
+      price: priceAPI });
+    dispatch(submitWalletForm({ ...this.state }));
+  };
+
   render() {
     const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
     return (
-      <div>
+      <form
+        onSubmit={ this.handleSubmit }
+      >
         Valor da despesa:
         <input
           data-testid="value-input"
@@ -88,7 +100,12 @@ class WalletForm extends Component {
           value={ description }
           onChange={ this.onInputChange }
         />
-      </div>
+        <button
+          type="submit"
+        >
+          Adicionar despesa
+        </button>
+      </form>
     );
   }
 }
@@ -96,6 +113,9 @@ class WalletForm extends Component {
 WalletForm.propTypes = {
   dispatch: PropTypes.func.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // expenses: PropTypes.arrayOf(PropTypes.shape({
+  //   id: PropTypes.number,
+  // })).isRequired,
 };
 
 const mapStateToProps = ({ wallet }) => ({
