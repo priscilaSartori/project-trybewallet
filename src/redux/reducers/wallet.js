@@ -1,7 +1,7 @@
 import { CURRENCY_INPUT, AWESOMEAPI, EXPENSES_INPUT } from '../actions/index';
 
 const INITIAL_STATE = {
-  currencies: [], // array de string
+  currencies: [],
   expenses: [
     { id: 0,
       value: '',
@@ -9,11 +9,10 @@ const INITIAL_STATE = {
       currency: '',
       method: '',
       tag: '',
-      price: {},
-    },
-  ], // array de objetos, com cada objeto tendo as chaves id, value, currency, method, tag, description e exchangeRates
-  editor: false, // valor booleano que indica de uma despesa está sendo editada
-  idToEdit: 0, // valor numérico que armazena o id da despesa que esta sendo editada
+      exchangeRates: {},
+    }],
+  editor: false,
+  idToEdit: 0,
 };
 
 const wallet = (state = INITIAL_STATE, action) => {
@@ -24,11 +23,15 @@ const wallet = (state = INITIAL_STATE, action) => {
     return { ...state,
       currencies: Object.keys(action.payload).filter((info) => info !== 'USDT') };
   case EXPENSES_INPUT:
-    console.log(action.payload);
-    return {
-      ...state,
-      expenses: action.payload,
-    };
+    return { ...state,
+      expenses: [...state.expenses, {
+        id: state.expenses.length,
+        value: action.payload.state.value,
+        description: action.payload.state.description,
+        currency: action.payload.state.currency,
+        method: action.payload.state.method,
+        tag: action.payload.state.tag,
+        exchangeRates: action.payload.currency }] };
   default:
     return state;
   }

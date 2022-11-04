@@ -8,15 +8,21 @@ export const emailImput = (payload) => ({
   payload,
 });
 
-// action creator
 const currencyInput = () => ({
   type: CURRENCY_INPUT,
 });
 
-// action creator
 const awesomeapi = (payload) => ({
   type: AWESOMEAPI,
   payload,
+});
+
+export const submitWalletForm = (state, currency) => ({
+  type: EXPENSES_INPUT,
+  payload: {
+    state,
+    currency,
+  },
 });
 
 export function fetchcurrency() {
@@ -28,16 +34,11 @@ export function fetchcurrency() {
   };
 }
 
-export const submitWalletForm = (payload) => ({
-  type: EXPENSES_INPUT,
-  payload,
-});
-
-export function fetchprice() {
+export function fetchprice(state) {
   return async (dispatch) => {
     dispatch(currencyInput());
     return fetch('https://economia.awesomeapi.com.br/json/all')
       .then((response) => response.json())
-      .then((currency) => dispatch(submitWalletForm(currency)));
+      .then((currency) => dispatch(submitWalletForm(state, currency)));
   };
 }
