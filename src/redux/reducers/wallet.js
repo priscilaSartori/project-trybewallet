@@ -25,17 +25,10 @@ const wallet = (state = INITIAL_STATE, action) => {
         tag: action.payload.state.tag,
         exchangeRates: action.payload.currency }] };
   case BTN_DELETE:
+    console.log(action.payload);
     return {
       ...state,
-      expenses: [{
-        id: state.expenses.length,
-        value: action.payload.state.value,
-        description: action.payload.state.description,
-        currency: action.payload.state.currency,
-        method: action.payload.state.method,
-        tag: action.payload.state.tag,
-        exchangeRates: action.payload.currency,
-      }],
+      expenses: action.payload,
     };
   default:
     return state;

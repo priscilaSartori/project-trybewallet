@@ -7,6 +7,7 @@ class Table extends Component {
   onButtonClick = async (event) => {
     const { dispatch, expenses } = this.props;
     const excluir = expenses.filter((expense) => expense.id !== Number(event.target.id));
+    console.log(excluir);
     dispatch(btnDelete(excluir));
   };
 
@@ -31,7 +32,6 @@ class Table extends Component {
           <tbody>
             {expenses.map((expense) => (
               <tr key={ expense.id }>
-                {/* <td>{expense.length}</td> */}
                 <td>{expense.description}</td>
                 <td>{expense.tag}</td>
                 <td>{expense.method}</td>
