@@ -2,15 +2,7 @@ import { CURRENCY_INPUT, AWESOMEAPI, EXPENSES_INPUT } from '../actions/index';
 
 const INITIAL_STATE = {
   currencies: [],
-  expenses: [
-    { id: 0,
-      value: '',
-      description: '',
-      currency: '',
-      method: '',
-      tag: '',
-      exchangeRates: {},
-    }],
+  expenses: [],
   editor: false,
   idToEdit: 0,
 };
