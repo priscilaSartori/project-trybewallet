@@ -2,6 +2,7 @@ export const EMAIL_INPUT = 'EMAIL_INPUT';
 export const CURRENCY_INPUT = 'CURRENCY_INPUT';
 export const AWESOMEAPI = 'AWESOMEAPI';
 export const EXPENSES_INPUT = 'EXPENSES_INPUT';
+export const BTN_DELETE = 'BTN_DELETE';
 
 export const emailImput = (payload) => ({
   type: EMAIL_INPUT,
@@ -23,6 +24,11 @@ export const submitWalletForm = (state, currency) => ({
     state,
     currency,
   },
+});
+
+export const btnDelete = (payload) => ({
+  type: BTN_DELETE,
+  payload,
 });
 
 export function fetchcurrency() {
