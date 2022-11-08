@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { btnDelete } from '../redux/actions/index';
+import { btnDelete, btnEdit } from '../redux/actions/index';
 
 class Table extends Component {
-  onButtonClick = async (event) => {
+  onButtonClick = ({ target }) => {
     const { dispatch, expenses } = this.props;
-    const excluir = expenses.filter((expense) => expense.id !== Number(event.target.id));
-    console.log(excluir);
+    const excluir = expenses.filter((expense) => expense.id !== Number(target.id));
     dispatch(btnDelete(excluir));
+  };
+
+  onButtonClickEdit = ({ target }) => {
+    console.log(target.id);
+    const { dispatch } = this.props;
+    dispatch(btnEdit(target.id));
   };
 
   render() {
     const { expenses } = this.props;
+    console.log(expenses);
     return (
       <div>
         <table>
@@ -36,17 +42,27 @@ class Table extends Component {
                 <td>{expense.tag}</td>
                 <td>{expense.method}</td>
                 <td>{parseFloat(expense.value).toFixed(2)}</td>
-                <td>{expense.exchangeRates[expense.currency].name}</td>
+                <td>{expense.exchangeRates[expense.currency]?.name}</td>
                 <td>
-                  {parseFloat(expense.exchangeRates[expense.currency].ask)
+                  {parseFloat(expense.exchangeRates[expense.currency]?.ask)
                     .toFixed(2)}
                 </td>
                 <td>
-                  {parseFloat(expense.value * expense.exchangeRates[expense.currency].ask)
+                  {parseFloat(
+                    expense.value * expense.exchangeRates[expense.currency].ask || '',
+                  )
                     .toFixed(2)}
                 </td>
                 <td>Real</td>
                 <td>
+                  <button
+                    data-testid="edit-btn"
+                    type="button"
+                    onClick={ this.onButtonClickEdit }
+                    id={ expense.id }
+                  >
+                    Editar
+                  </button>
                   <button
                     data-testid="delete-btn"
                     type="button"

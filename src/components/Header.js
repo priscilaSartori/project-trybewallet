@@ -8,7 +8,7 @@ class Header extends Component {
     if (expenses.length > 0) {
       const expensesReduce = expenses.reduce((acc, curr) => {
         const { value, exchangeRates, currency } = curr;
-        const ask = exchangeRates[currency]?.ask;
+        const ask = exchangeRates[currency]?.ask || '';
         const moeda = ask === undefined ? '0.00' : ask;
         acc += value * moeda;
         return acc;
@@ -21,12 +21,15 @@ class Header extends Component {
     const { email, expenses } = this.props;
     return (
       <div>
-        <div data-testid="email-field">
+        <div>
           Email:
-          { email }
+          <span data-testid="email-field">{email}</span>
         </div>
-        <div data-testid="total-field">
-          {expenses.length > 0 ? this.sum() : '0.00' }
+        <div>
+          Despesa total:
+          <span data-testid="total-field">
+            {expenses.length > 0 ? this.sum() : ' R$ 0.00'}
+          </span>
         </div>
         <div data-testid="header-currency-field">
           BRL

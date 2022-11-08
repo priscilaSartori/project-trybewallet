@@ -1,10 +1,11 @@
-import { CURRENCY_INPUT, AWESOMEAPI, EXPENSES_INPUT, BTN_DELETE } from '../actions/index';
+import { CURRENCY_INPUT, AWESOMEAPI, EXPENSES_INPUT,
+  BTN_DELETE, BTN_EDIT, BTN_SAVE, EDIT_STATE } from '../actions/index';
 
 const INITIAL_STATE = {
   currencies: [],
   expenses: [],
   editor: false,
-  idToEdit: 0,
+  idToEdit: '0',
 };
 
 const wallet = (state = INITIAL_STATE, action) => {
@@ -25,10 +26,28 @@ const wallet = (state = INITIAL_STATE, action) => {
         tag: action.payload.state.tag,
         exchangeRates: action.payload.currency }] };
   case BTN_DELETE:
-    console.log(action.payload);
     return {
       ...state,
       expenses: action.payload,
+    };
+  case BTN_EDIT:
+    return {
+      ...state,
+      editor: true,
+      idToEdit: action.payload,
+    };
+  case BTN_SAVE:
+    return {
+      ...state,
+      editor: false,
+    };
+  case EDIT_STATE:
+    return { ...state,
+      expenses: [...state.expenses, state.expenses.map((expense) => {
+        if (expense.id === action.payload.id) {
+          return action.payload;
+        } return expense;
+      })],
     };
   default:
     return state;
