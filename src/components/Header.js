@@ -8,7 +8,7 @@ class Header extends Component {
     if (expenses !== []) {
       const expensesReduce = expenses.reduce((acc, curr) => {
         const { value, exchangeRates, currency } = curr;
-        const ask = exchangeRates[currency]?.ask || '';
+        const ask = exchangeRates[currency]?.ask || undefined;
         const moeda = ask === undefined ? '0.00' : ask;
         acc += value * moeda;
         return acc;
@@ -28,7 +28,7 @@ class Header extends Component {
         <div>
           Despesa total:
           <span data-testid="total-field">
-            {expenses.length > 0 ? this.sum() : ' R$ 0.00'}
+            {expenses.length > 0 ? this.sum() : '0.00'}
           </span>
         </div>
         <div data-testid="header-currency-field">

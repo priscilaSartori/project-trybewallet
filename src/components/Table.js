@@ -5,8 +5,9 @@ import { btnDelete, btnEdit } from '../redux/actions/index';
 
 class Table extends Component {
   onButtonClick = ({ target }) => {
+    const idEvent = Number(target.id);
     const { dispatch, expenses } = this.props;
-    const excluir = expenses.filter((expense) => expense.id !== target.id);
+    const excluir = expenses.filter((expense) => expense.id !== idEvent);
     dispatch(btnDelete(excluir));
   };
 
@@ -17,8 +18,6 @@ class Table extends Component {
 
   render() {
     const { expenses } = this.props;
-    console.log(expenses);
-    expenses.map((expense) => console.log(expense));
     return (
       <div>
         <table>
@@ -42,7 +41,7 @@ class Table extends Component {
                 <td>{expense.tag}</td>
                 <td>{expense.method}</td>
                 <td>{parseFloat(expense.value).toFixed(2)}</td>
-                <td>{expense.exchangeRates[expense.currency].name}</td>
+                <td>{expense.exchangeRates[expense.currency]?.name}</td>
                 <td>
                   {parseFloat(expense.exchangeRates[expense.currency]?.ask)
                     .toFixed(2)}
