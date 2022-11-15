@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Header extends Component {
   sum = () => {
     const { expenses } = this.props;
-    if (expenses.length > 0) {
+    if (expenses !== []) {
       const expensesReduce = expenses.reduce((acc, curr) => {
         const { value, exchangeRates, currency } = curr;
         const ask = exchangeRates[currency]?.ask || '';

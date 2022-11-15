@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchcurrency, fetchprice, btnSave, editState } from '../redux/actions/index';
+import { fetchcurrency, fetchprice, editState } from '../redux/actions/index';
 
 class WalletForm extends Component {
   state = {
@@ -11,7 +11,6 @@ class WalletForm extends Component {
     currency: 'USD',
     method: 'Dinheiro',
     tag: 'Alinmentação',
-    button: false,
   };
 
   componentDidMount() {
@@ -28,50 +27,25 @@ class WalletForm extends Component {
     const { dispatch } = this.props;
     dispatch(fetchprice({ ...this.state }));
     this.setState({
-      id: '',
       value: '',
       description: '',
-      // currency: 'USD',
-      // method: 'Dinheiro',
-      // tag: 'Alinmentação',
     });
-  };
-
-  editForm = () => {
-    const { idToEdit, expenses, dispatch } = this.props;
-    const editar = expenses.filter((expense) => expense.id === Number(idToEdit));
-    this.setState({
-      id: editar[0].id,
-      value: editar[0].value,
-      description: editar[0].description,
-      currency: editar[0].currency,
-      method: editar[0].method,
-      tag: editar[0].tag,
-      button: true,
-    });
-    // dispatch(btnSave());
   };
 
   handleOnClickEdit = () => {
     const { dispatch } = this.props;
     dispatch(editState({ ...this.state }));
     this.setState({
-      id: '',
       value: '',
       description: '',
-      // currency: 'USD',
-      // method: 'Dinheiro',
-      // tag: 'Alinmentação',
-      button: false,
     });
   };
 
   render() {
-    const { value, description, currency, method, tag, button } = this.state;
+    const { value, description, currency, method, tag } = this.state;
     const { currencies, editor } = this.props;
     return (
       <div>
-        {/* {editor && this.editForm()} */}
         <form>
           Valor da despesa:
           <input
@@ -134,9 +108,10 @@ class WalletForm extends Component {
             value={ description }
             onChange={ this.onInputChange }
           />
-          {button
+          {editor
             ? (
               <button
+                data-testid="edit-btn"
                 type="button"
                 onClick={ this.handleOnClickEdit }
               >
@@ -159,9 +134,7 @@ class WalletForm extends Component {
 WalletForm.propTypes = {
   dispatch: PropTypes.func.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  expenses: PropTypes.arrayOf(PropTypes.shape).isRequired,
   editor: PropTypes.bool.isRequired,
-  idToEdit: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = ({ wallet }) => ({
@@ -169,6 +142,7 @@ const mapStateToProps = ({ wallet }) => ({
   expenses: wallet.expenses,
   editor: wallet.editor,
   idToEdit: wallet.idToEdit,
+  id: wallet.expenses.id,
 });
 
 export default connect(mapStateToProps)(WalletForm);
