@@ -5,31 +5,28 @@ import PropTypes from 'prop-types';
 class Header extends Component {
   sum = () => {
     const { expenses } = this.props;
-    if (expenses !== []) {
+    if (expenses.length > 0) {
+      console.log('entrei');
       const expensesReduce = expenses.reduce((acc, curr) => {
         const { value, exchangeRates, currency } = curr;
-        const ask = exchangeRates[currency]?.ask || undefined;
-        const moeda = ask === undefined ? '0.00' : ask;
-        acc += value * moeda;
+        const ask = exchangeRates[currency]?.ask;
+        acc += value * ask;
         return acc;
       }, 0);
       return parseFloat(expensesReduce).toFixed(2);
-    } return '0.00';
+    }
   };
 
   render() {
     const { email, expenses } = this.props;
     return (
       <div>
-        <div>
+        <div data-testid="email-field">
           Email:
-          <span data-testid="email-field">{email}</span>
+          {email}
         </div>
-        <div>
-          Despesa total:
-          <span data-testid="total-field">
-            {expenses.length > 0 ? this.sum() : '0.00'}
-          </span>
+        <div data-testid="total-field">
+          {expenses.length > 0 ? this.sum() : '0.00'}
         </div>
         <div data-testid="header-currency-field">
           BRL

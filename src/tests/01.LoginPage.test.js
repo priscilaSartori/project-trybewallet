@@ -76,7 +76,8 @@ describe('1 - Crie uma página inicial de login com os seguintes campos e caract
     userEvent.type(inputSenha, VALID_PASSWORD);
     userEvent.click(button);
     act(() => history.push('/carteira'));
-    expect(await screen.findByText('alguem@email.com')).toBeInTheDocument();
+    const email = await screen.findByText(/alguem@email.com/i);
+    expect(email).toBeInTheDocument();
     expect(history.location.pathname).toBe('/carteira');
   });
 
