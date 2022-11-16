@@ -6,10 +6,9 @@ class Header extends Component {
   sum = () => {
     const { expenses } = this.props;
     if (expenses.length > 0) {
-      console.log('entrei');
       const expensesReduce = expenses.reduce((acc, curr) => {
         const { value, exchangeRates, currency } = curr;
-        const ask = exchangeRates[currency]?.ask;
+        const { ask } = exchangeRates[currency];
         acc += value * ask;
         return acc;
       }, 0);
