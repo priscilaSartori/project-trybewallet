@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { btnDelete } from '../redux/actions/index';
+import { btnDelete, btnEdit } from '../redux/actions/index';
 
 class Table extends Component {
-  onButtonClick = async (event) => {
+  onButtonClick = async ({ target }) => {
     const { dispatch, expenses } = this.props;
-    const excluir = expenses.filter((expense) => expense.id !== Number(event.target.id));
+    const excluir = expenses.filter((expense) => expense.id !== Number(target.id));
     dispatch(btnDelete(excluir));
   };
 
-  onButtonClickEdit = async () => {
-
+  onButtonClickEdit = async ({ target }) => {
+    const { dispatch } = this.props;
+    dispatch(btnEdit(Number(target.id)));
   };
 
   render() {
