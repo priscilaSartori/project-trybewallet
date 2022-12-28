@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-11-16T13:35:07.179Z",
+    "end": "2022-11-16T13:35:11.922Z",
+    "duration": 4743,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0aea1427-0641-4919-9cc8-2696ec350f68",
+      "title": "",
+      "fullFile": "cypress/e2e/_requirements/06.ExpensesTable.cy.js",
+      "file": "cypress/e2e/_requirements/06.ExpensesTable.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10601b05-2e01-47cb-a140-5a50cf92523f",
+          "title": "6 - Desenvolva uma tabela com os gastos contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão",
+              "fullTitle": "6 - Desenvolva uma tabela com os gastos contendo as seguintes características: A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão",
+              "timedOut": null,
+              "duration": 1820,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('th').should('have.length', _constants.tableHeaderList.length);\ncy.wrap(_constants.tableHeaderList).each(header => {\n  cy.get('th').contains(header);\n});",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'USD')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `6 - Desenvolva uma tabela c...`",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'USD')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `6 - Desenvolva uma tabela c...`\n    at http://localhost:3000/static/js/bundle.js:139:28\n    at Array.reduce (<anonymous>)\n    at Header.sum (http://localhost:3000/static/js/bundle.js:131:41)\n    at Header.render (http://localhost:3000/static/js/bundle.js:162:46)\n    at finishClassComponent (http://localhost:3000/static/js/bundle.js:28212:35)\n    at updateClassComponent (http://localhost:3000/static/js/bundle.js:28169:28)\n    at beginWork (http://localhost:3000/static/js/bundle.js:29795:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:14786:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:14830:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:14887:35)",
+                "diff": null
+              },
+              "uuid": "da4b96a2-f8a9-43c6-8ff7-1d7309da5aa7",
+              "parentUUID": "10601b05-2e01-47cb-a140-5a50cf92523f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "da4b96a2-f8a9-43c6-8ff7-1d7309da5aa7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1820,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

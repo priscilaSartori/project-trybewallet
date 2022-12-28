@@ -1,0 +1,160 @@
+body {
+  align-items: center;
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.form {
+  background: rgba(225, 229, 235, 0.49);
+  border-radius: 0px;
+  display: flex;
+  height: 134px;
+  left: 121px;
+  line-height: 14px;
+  position: absolute;
+  top: 156px;
+  width: 1037px;
+  z-index: 1;
+}
+
+.imputDescription {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 250px;
+  position: absolute;
+  top: 30px;
+  width: 288.86px;
+}
+
+.imputTag {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 780px;
+  position: absolute;
+  top: 30px;
+  width: 155px;
+}
+
+.imputDespesa {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 130px;
+  position: absolute;
+  top: 80px;
+  width: 158px;
+}
+
+.imputPagamento {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 510px;
+  position: absolute;
+  top: 80px;
+  width: 228px;
+}
+
+.imputMoeda {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 845px;
+  position: absolute;
+  top: 80px;
+  width: 91px;
+}
+
+.paragrafoDescription {
+  align-items: center;
+  color: #003BE5;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 80px;
+  line-height: 14px;
+  position: absolute;
+  top: 25px;
+  width: 209.72px;
+}
+
+.paragrafoTag {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 600px;
+  line-height: 14px;
+  position: absolute;
+  top: 25px;
+  width: 177px;
+}
+
+.paragrafoDespesa {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 80px;
+  line-height: 14px;
+  position: absolute;
+  top: 75px;
+  width: 45px;
+}
+
+.paragrafoPagamento {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 330px;
+  line-height: 14px;
+  position: absolute;
+  top: 75px;
+  width: 177px;
+}
+
+.paragrafoMoeda {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 780px;
+  line-height: 14px;
+  position: absolute;
+  top: 75px;
+  width: 64px;
+}
+
+.btnDespesa {
+  background: #2FC18C;
+  border: 1px solid #2FC18C;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 40px;
+  left: 350px;
+  position: absolute;
+  top: 200px;
+  width: 330px;
+}

@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-11-16T14:38:03.037Z",
+    "end": "2022-11-16T14:38:40.188Z",
+    "duration": 37151,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "16af7e2e-200d-4e7c-a5c4-a91ed3e4e1a3",
+      "title": "",
+      "fullFile": "cypress/e2e/_requirements/01.LoginPage.cy.js",
+      "file": "cypress/e2e/_requirements/01.LoginPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05a27f27-2219-490e-894f-ab090b193dc1",
+          "title": "1 - Crie uma página inicial de login com os seguintes campos e características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A rota para esta página deve ser '/'",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: A rota para esta página deve ser '/'",
+              "timedOut": null,
+              "duration": 1499,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.location('pathname').should('eq', '/');",
+              "err": {},
+              "uuid": "a48250d4-e7a6-4a8c-9e68-096b7557ffe3",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um local para que o usuário insira seu email e senha",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Crie um local para que o usuário insira seu email e senha",
+              "timedOut": null,
+              "duration": 532,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).should('exist');\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).should('exist');",
+              "err": {},
+              "uuid": "d6ef79da-46f7-45c8-8558-5d014c37d082",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um botão com o texto 'Entrar'",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Crie um botão com o texto 'Entrar'",
+              "timedOut": null,
+              "duration": 264,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(/Entrar/i).should('exist');",
+              "err": {},
+              "uuid": "7e18354e-9008-4330-8c79-fd7c981d0056",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realize as seguintes verificações nos campos de email, senha e botão:",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Realize as seguintes verificações nos campos de email, senha e botão:",
+              "timedOut": null,
+              "duration": 10439,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).type(_constants.INVALID_EMAIL_0);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_1);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_2);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_3);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.VALID_EMAIL);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.INVALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.VALID_EMAIL);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('not.be.disabled');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10000ms: `cy.type()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 10000ms: `cy.type()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:162348:78)\n    at ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:147721:8)\n    at ensureDescendentsAndScroll (http://localhost:3000/__cypress/runner/cypress_runner.js:147728:14)\n    at ensureElIsNotCovered (http://localhost:3000/__cypress/runner/cypress_runner.js:147860:5)\n    at runAllChecks (http://localhost:3000/__cypress/runner/cypress_runner.js:148050:52)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:148074:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:167274:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:11073:18)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/01.LoginPage.cy.js:146:52)",
+                "diff": null
+              },
+              "uuid": "09ee4473-fb59-46ac-9f92-03a2e9cc59a4",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Salve o email no estado da aplicação, com a chave email, assim que o usuário logar.",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Salve o email no estado da aplicação, com a chave email, assim que o usuário logar.",
+              "timedOut": null,
+              "duration": 10693,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _helperFunctions.logInWithValidCredentials)();\ncy.window().its('store').invoke('getState').its('user.email').should('eq', _constants.VALID_EMAIL);",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:162348:78)\n    at ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:147721:8)\n    at ensureDescendentsAndScroll (http://localhost:3000/__cypress/runner/cypress_runner.js:147728:14)\n    at ensureElIsNotCovered (http://localhost:3000/__cypress/runner/cypress_runner.js:147860:5)\n    at runAllChecks (http://localhost:3000/__cypress/runner/cypress_runner.js:148050:52)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:148074:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:167274:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:11073:18)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at logInWithValidCredentials (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/01.LoginPage.cy.js:592:50)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/01.LoginPage.cy.js:166:52)",
+                "diff": null
+              },
+              "uuid": "e2e81df1-04d5-4c66-93ef-743cbd85c530",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A rota deve ser mudada para '/carteira' após o clique no botão.",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: A rota deve ser mudada para '/carteira' após o clique no botão.",
+              "timedOut": null,
+              "duration": 10316,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _helperFunctions.logInWithValidCredentials)();\ncy.location('pathname').should('eq', '/carteira');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:162348:78)\n    at ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:147721:8)\n    at ensureDescendentsAndScroll (http://localhost:3000/__cypress/runner/cypress_runner.js:147728:14)\n    at ensureElIsNotCovered (http://localhost:3000/__cypress/runner/cypress_runner.js:147860:5)\n    at runAllChecks (http://localhost:3000/__cypress/runner/cypress_runner.js:148050:52)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:148074:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:167274:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:11073:18)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at logInWithValidCredentials (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/01.LoginPage.cy.js:592:50)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/01.LoginPage.cy.js:170:52)",
+                "diff": null
+              },
+              "uuid": "697cd099-f865-4a19-a4a7-4deea93bd341",
+              "parentUUID": "05a27f27-2219-490e-894f-ab090b193dc1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a48250d4-e7a6-4a8c-9e68-096b7557ffe3",
+            "d6ef79da-46f7-45c8-8558-5d014c37d082",
+            "7e18354e-9008-4330-8c79-fd7c981d0056"
+          ],
+          "failures": [
+            "09ee4473-fb59-46ac-9f92-03a2e9cc59a4",
+            "e2e81df1-04d5-4c66-93ef-743cbd85c530",
+            "697cd099-f865-4a19-a4a7-4deea93bd341"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33743,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

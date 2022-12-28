@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-11-16T14:39:00.483Z",
+    "end": "2022-11-16T14:39:14.142Z",
+    "duration": 13659,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "1fe38ed8-3b89-4b2f-a7ad-5f313d53a3bd",
+      "title": "",
+      "fullFile": "cypress/e2e/_requirements/03.ExpensesForm.cy.js",
+      "file": "cypress/e2e/_requirements/03.ExpensesForm.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f138e9dc-950c-43f4-82bc-7d3047034328",
+          "title": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Um campo para adicionar o valor da despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para adicionar o valor da despesa",
+              "timedOut": null,
+              "duration": 10898,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.VALUE_INPUT_TEST_ID).should('exist');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `3 - Desenvolva um formulári...`",
+                "estack": "CypressError: Timed out retrying after 10000ms: `cy.clear()` failed because this element:\n\n`<input data-testid=\"email-input\" type=\"email\" name=\"email\" id=\"email\" value=\"\">`\n\nis being covered by another element:\n\n`<iframe id=\"webpack-dev-server-client-overlay\" src=\"about:blank\" style=\"position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;\"></iframe>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `3 - Desenvolva um formulári...`\n    at $Cy.ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:162348:78)\n    at ensureDescendents (http://localhost:3000/__cypress/runner/cypress_runner.js:147721:8)\n    at ensureDescendentsAndScroll (http://localhost:3000/__cypress/runner/cypress_runner.js:147728:14)\n    at ensureElIsNotCovered (http://localhost:3000/__cypress/runner/cypress_runner.js:147860:5)\n    at runAllChecks (http://localhost:3000/__cypress/runner/cypress_runner.js:148050:52)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:148074:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:167274:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:11073:18)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at logInWithValidCredentials (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/03.ExpensesForm.cy.js:582:50)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/03.ExpensesForm.cy.js:133:52)",
+                "diff": null
+              },
+              "uuid": "70802067-960b-4197-b935-0638ff12d716",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Um campo para adicionar a descrição da despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para adicionar a descrição da despesa",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.DESCRIPTION_INPUT_TEST_ID).should('exist');",
+              "err": {},
+              "uuid": "b6d26650-be4e-4114-bc4a-8c67a058d3fc",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Um campo para selecionar em qual moeda será registrada a despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar em qual moeda será registrada a despesa",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.CURRENCY_INPUT_TEST_ID).find('option').should('have.length', _constants.currenciesOptions.length);\ncy.wrap(_constants.currenciesOptions).each(currency => {\n  cy.getByTestId(_constants.CURRENCY_INPUT_TEST_ID).contains('option', currency).should('exist');\n});",
+              "err": {},
+              "uuid": "bcd06806-b975-4853-9191-720d51d8ed57",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "A chave currencies no estado global deve ser um array de siglas puxadas através de uma requisição à API",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: A chave currencies no estado global deve ser um array de siglas puxadas através de uma requisição à API",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@mockFetch').should('be.calledWith', 'https://economia.awesomeapi.com.br/json/all');\ncy.window().its('store').invoke('getState').its('wallet.currencies').should('deep.equal', _constants.currenciesOptions);",
+              "err": {},
+              "uuid": "344044f8-270a-47ab-955a-0978b5e15752",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Um campo para selecionar qual método de pagamento será utilizado",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar qual método de pagamento será utilizado",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.METHOD_INPUT_TEST_ID).find('option').should('have.length', _constants.methodOptions.length);\ncy.wrap(_constants.methodOptions).each(method => {\n  cy.getByTestId(_constants.METHOD_INPUT_TEST_ID).contains('option', method).should('exist');\n});",
+              "err": {},
+              "uuid": "964c9dcc-488c-4a7d-9a2a-efc02aba2389",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Um campo para selecionar uma categoria (tag) para a despesa.",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar uma categoria (tag) para a despesa.",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.TAG_INPUT_TEST_ID).find('option').should('have.length', _constants.tagOptions.length);\ncy.wrap(_constants.tagOptions).each(tag => {\n  cy.getByTestId(_constants.TAG_INPUT_TEST_ID).contains('option', tag).should('exist');\n});",
+              "err": {},
+              "uuid": "e357b13b-8ff8-43fe-839c-7b88a962ef72",
+              "parentUUID": "f138e9dc-950c-43f4-82bc-7d3047034328",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "70802067-960b-4197-b935-0638ff12d716"
+          ],
+          "pending": [],
+          "skipped": [
+            "b6d26650-be4e-4114-bc4a-8c67a058d3fc",
+            "bcd06806-b975-4853-9191-720d51d8ed57",
+            "344044f8-270a-47ab-955a-0978b5e15752",
+            "964c9dcc-488c-4a7d-9a2a-efc02aba2389",
+            "e357b13b-8ff8-43fe-839c-7b88a962ef72"
+          ],
+          "duration": 10898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

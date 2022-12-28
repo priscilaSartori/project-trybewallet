@@ -1,0 +1,38 @@
+.boxAzul {
+  background: #003BE5;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  height: 100%;
+  left: 63px;
+  position: absolute;
+  top: 150px;
+  width: 1155px;
+  z-index: 0;
+}
+
+.table {
+  position: absolute;
+  top: 350px;
+}
+
+.tableThead {
+  color: white;
+}
+
+.tableTbody {
+  color: #2FC18C;
+}
+
+.img {
+  background: #003BE5;
+}
+
+th {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
+
+td {
+  border-bottom: 1px solid #2FC18C;
+  text-align: center;
+}

@@ -1,0 +1,56 @@
+.boxBranco {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  height: 482px;
+  left: 121px;
+  position: absolute;
+  top: 0;
+  width: 1037px;
+  z-index: 1;
+}
+
+.logoHeader {
+  height: 52.29px;
+  left: 80px;
+  position: absolute;
+  top: 56.99px;
+  width: 250.19px;
+}
+
+.despesas {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 592px;
+  line-height: 14px;
+  position: absolute;
+  top: 88px;
+  width: 233px;
+}
+
+.moedas {
+  display: flex;
+  left: 450px;
+  position: absolute;
+  top: 80px;
+}
+
+.emailHeader {
+  align-items: center;
+  color: #2FC18C;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  height: 14px;
+  left: 750px;
+  line-height: 14px;
+  position: absolute;
+  top: 88px;
+  width: 123px;
+}

@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(47, 193, 140);
+  background-image: url(../css/foto-fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quadro {
+  background: white;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  height: 356px;
+  left: 500px;
+  position: absolute;
+  top: 201px;
+  width: 525px;
+}
+
+.logo {
+  height: 56.14px;
+  left: 130px;
+  position: absolute;
+  top: 70px;
+  width: 268.6px;
+}
+
+.email {
+  background: white;
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 40px;
+  left: 100px;
+  position: absolute;
+  top: 150px;
+  width: 330px;
+}
+
+.senha {
+  background: white;
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 40px;
+  left: 100px;
+  position: absolute;
+  top: 200px;
+  width: 330px;
+}
+
+.entrar {
+  background: rgb(0, 59, 229);
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  height: 40px;
+  left: 100px;
+  position: absolute;
+  top: 250px;
+  width: 330px;
+}
