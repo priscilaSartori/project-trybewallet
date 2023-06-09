@@ -2,9 +2,9 @@
 
 <br />
 
-<!--  ![TelaLogin](src/images/TelaLogin.png)
- ![TelaLoading](src/images/TelaLoading.png)
-  -->
+ ![TelaLogin](src/TelaLogin.png)
+ ![TelaLoading](src/TelaWallet.png)
+ 
 <br />
 
 ## Descrição do Projeto
