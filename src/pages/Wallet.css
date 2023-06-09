@@ -1,0 +1,11 @@
+.fundo {
+  background-color: #2FC18C;
+  background-image: url(../../imgs/fotofundo.png);
+  height: 700px;
+  left: -5.05px;
+  mix-blend-mode: luminosity;
+  /* opacity: 0.5; */
+  /* position: absolute; */
+  top: -147.39px;
+  width: 1600px;
+}

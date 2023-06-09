@@ -1,0 +1,59 @@
+.headerTela {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  height: 482px;
+  /* left: 10px; */
+  left: 105px;
+  padding: 20px;
+  position: absolute;
+  /* top: 10px; */
+  top: -97px;
+  width: 1037px;
+  z-index: 1;
+}
+
+.imgHeader {
+  left: 50px;
+  position: relative;
+  /* padding-top: 200px; */
+  top: 110px;
+  width: 300px;
+}
+
+.totalDespesa {
+  color: #003BE5;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 490px;
+  line-height: 14px;
+  position: relative;
+  top: 80px;
+  width: 233px;
+}
+
+.pHeader {
+  margin: 0;
+  padding-right: 5px;
+}
+
+.perfil {
+  align-items: center;
+  color: #2FC18C;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  height: 14px;
+  left: 800px;
+  line-height: 14px;
+  position: absolute;
+  top: 165px;
+  width: 123px;
+}

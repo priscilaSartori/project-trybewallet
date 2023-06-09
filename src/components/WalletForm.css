@@ -1,0 +1,150 @@
+.formWallet {
+  background: rgba(225, 229, 235, 0.49);
+  border-radius: 0px;
+  height: 134px;
+  left: 106px;
+  position: absolute;
+  top: 150px;
+  width: 1075px;
+  z-index: 2;
+}
+
+.pvalor {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 100px;
+  line-height: 14px;
+  position: absolute;
+  top: 70px;
+  width: 300px;
+}
+
+.inputValor {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 220px;
+  position: absolute;
+  top: 75px;
+  width: 158px;
+}
+
+.pMoeda {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 830px;
+  line-height: 14px;
+  position: absolute;
+  top: 70px;
+  width: 64px;
+}
+
+.inputMoeda {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 900px;
+  position: absolute;
+  top: 75px;
+  width: 91px;
+}
+
+.pMetodo {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 420px;
+  line-height: 14px;
+  position: absolute;
+  top: 70px;
+  width: 177px;
+
+}
+
+.inputMetodo {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 570px;
+  position: absolute;
+  top: 75px;
+  width: 228px;
+}
+
+.pTag {
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 750px;
+  line-height: 14px;
+  position: absolute;
+  top: 10px;
+  width: 177px;
+}
+
+.inputTag {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 800px;
+  position: absolute;
+  top: 15px;
+  width: 155px;
+}
+
+.pDescription {
+  align-items: center;
+  color: #003BE5;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 14px;
+  left: 100px;
+  line-height: 14px;
+  position: absolute;
+  top: 10px;
+  width: 209.72px;
+}
+
+.inputDescription {
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 30px;
+  left: 250px;
+  position: absolute;
+  top: 15px;
+  width: 288.86px;
+}
+
+.buttonWallet {
+  background: #2FC18C;
+  border: 1px solid #2FC18C;
+  border-radius: 5px; 
+  box-sizing: border-box;
+  height: 40px;
+  left: 350px;
+  position: absolute;
+  top: 190px;
+  width: 330px;
+}

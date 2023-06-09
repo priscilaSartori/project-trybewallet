@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './Header.css';
+import logoTrybeWallet from '../logoTrybeWallet.png';
 
 class Header extends Component {
   sum = () => {
@@ -19,16 +21,20 @@ class Header extends Component {
   render() {
     const { email, expenses } = this.props;
     return (
-      <div>
-        <div data-testid="email-field">
-          Email:
+      <div className="headerTela">
+        <img src={ logoTrybeWallet } alt="logo Trybe Wallet" className="imgHeader" />
+        <div className="totalDespesa">
+          <p className="pHeader">Total de despesas:</p>
+          <div data-testid="total-field">
+            {expenses.length > 0 ? this.sum() : '0.00'}
+          </div>
+          <div data-testid="header-currency-field">
+            BRL
+          </div>
+        </div>
+        <div data-testid="email-field" className="perfil">
+          {/* Email: */}
           {email}
-        </div>
-        <div data-testid="total-field">
-          {expenses.length > 0 ? this.sum() : '0.00'}
-        </div>
-        <div data-testid="header-currency-field">
-          BRL
         </div>
       </div>
     );

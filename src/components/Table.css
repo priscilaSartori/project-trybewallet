@@ -1,0 +1,38 @@
+.quadroAzul {
+  position: absolute;
+  width: 1155px;
+  height: 464px;
+  left: 63px;
+  top: 150px;
+  background: #003BE5;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.table {
+  position: absolute;
+  width: 1040px;
+  height: 129px;
+  left: 50px;
+  top: 300px;
+}
+
+tr {
+  /* position: absolute; */
+  /* width: 110.93px; */
+  /* height: 26.6px; */
+  /* left: 122.24px; */
+  /* top: 0px; */
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+

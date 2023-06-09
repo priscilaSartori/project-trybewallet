@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { emailImput } from '../redux/actions/index';
+import './Login.css';
+import logoTrybeWallet from '../logoTrybeWallet.png';
 
 class Login extends React.Component {
   state = {
@@ -38,39 +40,47 @@ class Login extends React.Component {
   render() {
     const { email, password, isSaveButtonDisabled } = this.state;
     return (
-      <div>
-        <form
-          onSubmit={ (event) => this.handleSubmit(event) }
-        >
-          <label htmlFor="email">
-            Email
-            <input
-              data-testid="email-input"
-              type="email"
-              name="email"
-              id="email"
-              value={ email }
-              onChange={ this.onInputChange }
-            />
-          </label>
-          <label htmlFor="password">
-            Senha
-            <input
-              data-testid="password-input"
-              type="password"
-              name="password"
-              id="password"
-              value={ password }
-              onChange={ this.onInputChange }
-            />
-          </label>
-          <button
-            type="submit"
-            disabled={ isSaveButtonDisabled }
+      <div className="fundo">
+        <div className="quadroBranco">
+          <img src={ logoTrybeWallet } alt="logo Trybe Wallet" className="imgLogin" />
+          <form
+            onSubmit={ (event) => this.handleSubmit(event) }
           >
-            Entrar
-          </button>
-        </form>
+            <label htmlFor="email">
+              Email
+              <input
+                data-testid="email-input"
+                type="email"
+                name="email"
+                id="email"
+                value={ email }
+                onChange={ this.onInputChange }
+                className="inputLogin"
+                placeholder="Email"
+              />
+            </label>
+            <label htmlFor="password">
+              Senha
+              <input
+                data-testid="password-input"
+                type="password"
+                name="password"
+                id="password"
+                value={ password }
+                onChange={ this.onInputChange }
+                className="inputLogin"
+                placeholder="Senha"
+              />
+            </label>
+            <button
+              type="submit"
+              disabled={ isSaveButtonDisabled }
+              className="buttonLogin"
+            >
+              Entrar
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

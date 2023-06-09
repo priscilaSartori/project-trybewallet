@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { btnDelete, btnEdit } from '../redux/actions/index';
+import './Table.css';
 
 class Table extends Component {
   onButtonClick = async ({ target }) => {
@@ -18,8 +19,8 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <div>
-        <table>
+      <div className="quadroAzul">
+        <table className="table">
           <thead>
             <tr>
               <th>Descrição</th>
