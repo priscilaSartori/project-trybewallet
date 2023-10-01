@@ -1,7 +1,7 @@
 .quadroAzul {
   position: absolute;
   width: 1155px;
-  height: 460px;
+  height: 500px;
   left: 63px;
   top: 90px;
   background: #003BE5;
@@ -34,5 +34,3 @@ tr {
   text-align: center;
   color: #FFFFFF;
 }
-
-

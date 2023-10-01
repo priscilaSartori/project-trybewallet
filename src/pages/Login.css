@@ -1,9 +1,7 @@
 .fundo {
   background-color: #2FC18C;
   height: 550px;
-  /* left: -5.05px; */
   mix-blend-mode: luminosity;
-  /* position: fixed; */
   top: -147.39px;
   width: 1400px;
 }
