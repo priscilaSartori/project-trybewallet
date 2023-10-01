@@ -47,7 +47,7 @@ class Login extends React.Component {
             onSubmit={ (event) => this.handleSubmit(event) }
           >
             <label htmlFor="email">
-//               Email
+              Email
               <input
                 data-testid="email-input"
                 type="email"
@@ -60,7 +60,7 @@ class Login extends React.Component {
               />
             </label>
             <label htmlFor="password">
-//               Senha
+              Senha
               <input
                 data-testid="password-input"
                 type="password"
