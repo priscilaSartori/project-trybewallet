@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -41,13 +42,13 @@ class Login extends React.Component {
     const { email, password, isSaveButtonDisabled } = this.state;
     return (
       <div className="fundo">
+        <img src="https://drive.google.com/uc?export=view&id=13lc3sXLQz9u3_zVsgotqC23qKxpNC-LD" width="100%" height="100%" />
         <div className="quadroBranco">
           <img src={ logoTrybeWallet } alt="logo Trybe Wallet" className="imgLogin" />
           <form
             onSubmit={ (event) => this.handleSubmit(event) }
           >
             <label htmlFor="email">
-              Email
               <input
                 data-testid="email-input"
                 type="email"
@@ -60,7 +61,6 @@ class Login extends React.Component {
               />
             </label>
             <label htmlFor="password">
-              Senha
               <input
                 data-testid="password-input"
                 type="password"

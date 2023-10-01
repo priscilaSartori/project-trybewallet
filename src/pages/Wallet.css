@@ -1,11 +1,16 @@
 .fundo {
-  background-color: #2FC18C;
-  /* background-image: url(../../imgs/fotofundo.png); */
-  height: 700px;
-  left: -5.05px;
-  mix-blend-mode: luminosity;
+  /* background-color: #2FC18C;
+  /* background-image: url('https://drive.google.com/uc?export=view&id=13lc3sXLQz9u3_zVsgotqC23qKxpNC-LD'); */
+  /* background-repeat: no-repeat; */
+  /* height: 600px; */
+  /* left: -5.05px; */
+  /* mix-blend-mode: luminosity; */
   /* opacity: 0.5; */
   /* position: absolute; */
-  top: -147.39px;
-  width: 1600px;
+  /* top: -147.39px; */
+  /* width: 100%; */
+  background-image: url('https://drive.google.com/uc?export=view&id=13lc3sXLQz9u3_zVsgotqC23qKxpNC-LD');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

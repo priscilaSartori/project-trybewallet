@@ -2,14 +2,14 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
-  height: 482px;
+  height: 400px;
   /* left: 10px; */
   left: 105px;
-  padding: 20px;
+  padding: 15px;
   position: absolute;
   /* top: 10px; */
   top: -97px;
-  width: 1037px;
+  width: 1050px;
   z-index: 1;
 }
 
